@@ -334,11 +334,113 @@ print(count)'''
 #     if 'Python' in str(i):
 #         l.remove(i)
 # print(l)
-telephone_numbers = [
-    '080-0000-0000',
-    '090-1111-1111',
-    '090-2222-2222',
-    '080-3333-3333'
-]
-new = [i for i in telephone_numbers if '080' == i[:3]]
-print(new)
+# telephone_numbers = [
+#     '080-0000-0000',
+#     '090-1111-1111',
+#     '090-2222-2222',
+#     '080-3333-3333'
+# ]
+# new = [i for i in telephone_numbers if '080' == i[:3]]
+# print(new)
+#
+# t1 = (1, 2, 3)
+# t2 = ([1, 2, 3])
+# print(type(t1))
+# print(t2)
+#
+# t = (1,)
+# print(type(t))
+
+# t = (i for i in range(4))
+# print(t)
+
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# new = [tuple(l[i:i+3]) for i in range(0, 9, 3)]
+# print(new)
+
+# l = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+# for i, row in enumerate(l, start=1):
+#     a, b, c = row
+#     print(a, b, c)
+#
+# t = (1, '2', 3, '4', 5, '6', 7, '8', 9)
+# new_t = tuple(reversed(t))
+# print(new_t)
+
+# t = (1, '2', 3, '4', 5)
+# str_t = tuple(str(i) for i in t)
+# int_t = int(''.join(str_t)) # int同志のjoinはできない
+# print(int_t)
+
+# t = (1, [2, 3], '4', (5, 6, 7), '8', (9, 10))
+# count = 0
+# for i in t:
+#     if isinstance(i, tuple):
+#         count +=1
+# print(count)
+# t_in_tuple = [i for i in t if isinstance(i, tuple)] # やってることは同じだけどリスト化して数えたら早い
+# print(len(t_in_tuple))
+
+# t = (1, [2, 3], '4', (5, 6, 7), None, (9, 10))
+# new_t = []
+# for i in t:
+#     if isinstance(i, tuple):
+#         new_t.append(i)
+#     elif isinstance(i, list):
+#         new_t.append(tuple(i))
+#     else:
+#         new_t.append((i, ))
+# print(new_t)
+# l = [1, 2, 3]
+# print(set(l))
+# print(set())
+
+# l1 = [1, 2, 3, 4, 5]
+# l2 = [7, 6, 5, 4]
+# # l3 = l1 + l2
+# # print(set(l3))
+# l3 = set(l1) | set(l2)
+# print(l3)
+
+# l1 = [1, 2, 3, 4, 5]
+# l2 = [7, 6, 5, 4]
+# l3 = set(l1) - set(l2)
+# l4 = set(l1) ^ set(l2)
+# l5 = set(l1) | set(l2)
+# print(l3)
+# print(l4)
+# print(l5)
+
+# l1 = [1, 2, 3, 4, 5]
+# l2 = [3, 4, 5]
+# l3 = set(l1) <= set(l2)
+# l4 = set(l1) >= set(l2)
+# print(l3)
+# print(l4)
+
+# d1 = {'A': 111, 'B': 222, 'C': 333}
+# d2 = {}
+# print(d1)
+# print(d2)
+# # d1['D'] = 444
+# d1.update({'D': 444})
+# print(d1)
+
+# d1 = {'A': 111, 'B': 222, 'C': 333}
+# d2 = {'D': 444, 'E': 555}
+# d3 = {'F': 666}
+# new_d = {}
+# # for i in [d1, d2, d3]:
+# #     new_d.update(i)
+# # print(new_d)
+# print({**d1, **d2, **d3})
+
+# d1 = {'A': 111, 'B': 222, 'C': 333}
+# print('A' in d1)
+# print(d1.keys())  # こっちは古い　キーだけの存在確認なら上の方法
+# print('444' in d1.values())
+
+keys = ['A', 'B', 'C']
+value = [111, 222, 333]
+d1 = dict(zip(keys, value))
+print(d1)
