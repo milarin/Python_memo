@@ -440,7 +440,114 @@ print(count)'''
 # print(d1.keys())  # こっちは古い　キーだけの存在確認なら上の方法
 # print('444' in d1.values())
 
-keys = ['A', 'B', 'C']
-value = [111, 222, 333]
-d1 = dict(zip(keys, value))
-print(d1)
+# keys = ['A', 'B', 'C']
+# value = [111, 222, 333]
+# d1 = dict(zip(keys, value))
+# print(d1)
+
+# d = {'A': 111, 'B': 222, 'C': 333}
+# new_d = {k: v for k, v in d.items() if v > 150}  # key,valueを取り出したい場合はitems()を使う
+# print(new_d)
+
+# d = {'A': 111, 'B': 222, 'C': 333}
+# l = ['B', 'C', 'D', 'A']
+# for k in l:
+#     print({d.get(k)})
+
+# d = {'B': 222, 'A': 111, 'D':444, 'C': 333}
+# d2 = sorted(d.items(), key=lambda x:x[1])
+# print(d2)
+
+# m, p, q = 10, 31, 52
+# first = (1 - p / 100) * m
+# second = (1 - q / 100) * first
+# print(second)
+# l = [
+#     {'id': 10000,
+#      'feature': {'name': 'Michael',
+#                  'height': 180.3,
+#                  'weight': 63.7,
+#                  'skills': {
+#                      'IT': ['Python', 'Golang', 'SQL'],
+#                      'Others': ['Chinese', 'Math']
+#                  }
+#                  }
+#      },
+#     {'id': 10001,
+#      'feature': {'name': 'Nancy',
+#                  'height': 156.7,
+#                  'weight': 39.7,
+#                  'skills': {
+#                      'IT': ['Java', 'SQL', 'JavaScript'],
+#                      'Others': ['Accounting']
+#                  }
+#                  }
+#      }
+# ]
+
+#  リストは数字で取り出し、辞書型は名前で取り出す
+# print(l[0]['feature']['skills']['Others'][0])
+#
+# it_skills = [d['feature']['skills']['IT'] for d in l]
+# michael_skill, nancy_skill = it_skills
+# common_skill = set(michael_skill) & set(nancy_skill)
+# print(common_skill)
+
+# d = {'B': 222, 'A': 111, 'D': 444, 'C': 333}
+# print(max(d.values()))
+# print(min(d))
+
+# item = {}
+# if item == {}:
+#     print('からの辞書です')
+# else:
+#     print(item)
+
+# d = {'B': 222, 'A': 111, 'D': 444, 'C': 333}
+# new_d = d.copy()
+# for k, v in d.items():
+#     if v % 2 != 0:
+#         # forのループ処理中に中身を増減(削除追加)をするのはだめだから一回別の要素を作る必要がある
+#         del new_d[k]
+# print(new_d)
+#
+# for k, v in {**d}.items():
+#     if v % 2 != 0:
+#         del d[k]
+#
+# # new_d = {k: v for k, v in d.items() if v % 2 == 0}
+# print(d)
+
+# l = [False, True, False, False, True]
+# print(len(l) - sum(l))
+# # Falseは0 Trueは1 になるよ
+
+# l = [False, True, False, False, True]
+# new_l = [int(i) for i in l]
+# print(new_l)
+
+# a = 4
+# if not (a == 3 or a == 7):
+#     print(f'{a}は3でも7でもありません')
+
+# l = [1, 0, [], (2, 3), 'AA', '', False, '*3']
+# true_count = sum([bool(i) for i in l])
+# print(true_count)
+
+# x = False
+# print(1 if x else 100)
+
+# l = [1, 2, None, 3]
+# for i in l:
+#     if i is None:
+#         print(10000)
+#     else:
+#         print(i)
+
+# l = [1, 2, None, False, '3', '4', None, True]
+# count = 0
+# for i in l:
+#     if i is None or i is True:
+#         count += 1
+# print(count)
+# print(len([i for i in l if i is None or i is True]))  # 上のを1行で書く
