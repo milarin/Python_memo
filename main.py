@@ -551,3 +551,85 @@ print(count)'''
 #         count += 1
 # print(count)
 # print(len([i for i in l if i is None or i is True]))  # 上のを1行で書く
+
+# import  random
+#
+# d = {0: 'グー', 1: 'チョキ', 2: 'パー'}
+# options = tuple(d.keys())
+# print(options)
+# my_option = 11
+# is_win = False
+# print('*****************')
+# print(f'選択肢：{d}')
+# print('*****************')
+# while my_option not in options:
+#     my_option = input('自分の出す手を入力してください(整数 : 0, 1, 2) >')
+#     com_option = random.choice(options)
+#     try:
+#         my_option = int(my_option)
+#     except:
+#         print('整数の0, 1, 2から入力してください')
+# if my_option == com_option:
+#     is_win = 'あいこ'
+# elif my_option == 0 and com_option == 2:
+#     is_win = True
+# elif my_option == 1 and com_option == 0:
+#     is_win = True
+# elif my_option == 2 and com_option == 1:
+#     is_win = True
+#
+# if isinstance(is_win, bool):
+#     is_win = '勝ち' if is_win else '負け'
+# print(f'自分が選んだ数字： {d[my_option]}')
+# print(f'CPが選んだ数字： {d[com_option]}')
+# print(f'結果： {is_win}')
+
+
+
+import random
+
+d = {0: 'グー', 1: 'チョキ', 2: 'パー'}
+options = tuple(d.keys())
+pc_hand = random.choice(options)
+my_hand = 11
+is_win = False
+while my_hand not in options:
+    my_hand = input(f'数字を選択してください: {d} >')
+    try:
+        my_hand = int(my_hand)
+    except:
+        print('整数0, 1, 2から選んでください')
+print(f'自分の出した手: {d[my_hand]}')
+print(f'コンピュータの出した手：{d[pc_hand]}')
+if my_hand == pc_hand:
+    is_win = 'あいこ'
+elif my_hand == 0 and pc_hand == 1:
+    is_win = True
+elif my_hand == 1 and pc_hand == 2:
+    is_win = True
+elif my_hand == 2 and pc_hand == 0:
+    is_win = True
+
+if isinstance(is_win, bool):
+    is_win = '勝ち' if True else '負け'
+
+print(f'結果: {is_win}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
