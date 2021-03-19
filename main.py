@@ -585,51 +585,208 @@ print(count)'''
 # print(f'結果： {is_win}')
 
 
-
-import random
-
-d = {0: 'グー', 1: 'チョキ', 2: 'パー'}
-options = tuple(d.keys())
-pc_hand = random.choice(options)
-my_hand = 11
-is_win = False
-while my_hand not in options:
-    my_hand = input(f'数字を選択してください: {d} >')
-    try:
-        my_hand = int(my_hand)
-    except:
-        print('整数0, 1, 2から選んでください')
-print(f'自分の出した手: {d[my_hand]}')
-print(f'コンピュータの出した手：{d[pc_hand]}')
-if my_hand == pc_hand:
-    is_win = 'あいこ'
-elif my_hand == 0 and pc_hand == 1:
-    is_win = True
-elif my_hand == 1 and pc_hand == 2:
-    is_win = True
-elif my_hand == 2 and pc_hand == 0:
-    is_win = True
-
-if isinstance(is_win, bool):
-    is_win = '勝ち' if True else '負け'
-
-print(f'結果: {is_win}')
-
+# import random
+#
+# d = {0: 'グー', 1: 'チョキ', 2: 'パー'}
+# options = tuple(d.keys())
+# pc_hand = random.choice(options)
+# my_hand = 11
+# is_win = False
+# while my_hand not in options:
+#     my_hand = input(f'数字を選択してください: {d} >')
+#     try:
+#         my_hand = int(my_hand)
+#     except:
+#         print('整数0, 1, 2から選んでください')
+# print(f'自分の出した手: {d[my_hand]}')
+# print(f'コンピュータの出した手：{d[pc_hand]}')
+# if my_hand == pc_hand:
+#     is_win = 'あいこ'
+# elif my_hand == 0 and pc_hand == 1:
+#     is_win = True
+# elif my_hand == 1 and pc_hand == 2:
+#     is_win = True
+# elif my_hand == 2 and pc_hand == 0:
+#     is_win = True
+#
+# if isinstance(is_win, bool):
+#     is_win = '勝ち' if True else '負け'
+#
+# print(f'結果: {is_win}')
 
 
+# print(7 + 3)
+# print(7 - 3)
+# print(7 * 3)
+# print(7 % 3)
+# print(7 / 3)
+# n = input('すきな文字を入力してね')
+# print(n)
+# print(10 ** 10 ** 2)
+# for i in range(31):
+#     if i % 3 == 0:
+#         print(i)
 
+# print([i for i in range(1,31) if i % 3 == 0])
 
+# l = [i for i in range(1, 31) if i % 3 == 0 and '3' in str(i)]
+# print(l)
+# kg = float(input('taijuu'))
+# m = float(input('sinntyou')) / 100
+# bmi = kg / (m ** 2)
+# print(bmi)
 
+# a = input('整数を入力してください>') # str型で受け取って aaa をつくる
+# print(int(a) + int(a*3))
 
+# count = 0
+# n = str(input('文字を入力してください'))
+# for i in n:
+#     count += 1
+# print(count)
 
+# n = str(input('文字を入力してください'))
+# print(f'{n[0]}, {n[-1]}')
 
+# n = str(input('文字を入力してください'))
+# d = {}
+# for s in n:
+#     if s in d.keys():
+#         d[s] += 1
+#     else:
+#         d[s] = 1
+# print(d)
 
+# import collections
+# count = collections.Counter(n)
+# print(count)
 
+# n = str(input('文字を入力してください'))
+# # print(n.upper())
+#
+# # 回答と違うやり方
+# if n == n.capitalize():
+#     print(n*2)
+# else:
+#     print(n.capitalize())
 
+# v = ['a', 'i', 'u', 'e', 'o']
+# n = input('文字を入力してください')
+# new = ''
+# for i in n:
+#     if i in v:
+#         continue
+#     new += i
+# print(new)
 
+# f = input('1つ目の文字を入力してください')
+# s = input('2つ目の文字を入力してください')
+# new = ''
+# # 少しコード量が多いやり方
+# # for i in f:
+# #     for t in s:
+# #         if i == t and not i in new:
+# #             new += i
+# #         else:
+# #             continue
+#
+# # コードが短い方のやり方  文字列はリテラブルなので、わざわざ2回目のforを書かなくていい
+# # for i in f:
+# #     if i in s and not i in new:
+# #         new += i
+# print(new)
 
+# f = input('1つ目の文字を入力してください').split()  # splitした時点でリスト化されるから[]で囲わなくていい
+# s = input('2つ目の文字を入力してください').split()
+# print(f)
+# new = [i for i in f if i in s]  # 内包表記はできない？？？
+# # for i in f:
+# # #     if i in s and not i in new:
+# # #         new.append(i)
+#
+# print(new)
 
+# n = input('文字を入力してください')
+# count = 0
+# for i in n:
+#     count += 1
+# index = count // 2
+# if count % 2 == 0:
+#     new = n[:index] + '@' + n[index:]
+# else:
+#     new = n[:index] + '@' + n[index + 1:]
+# print(new)
+#
+# f = input('1つ目の文字を入力してください')
+# s = input('2つ目の文字を入力してください')
+# t = input('3つ目の文字を入力してください')
+#
+# l = [f, s, t]
+# l.sort()
+# print(' '.join(l))
 
+# l = [1, 2, 3, 4, 5]
+# count = 0
+# for _ in l:
+#     count += _
+# print(count)
+# print(sum(l))
 
+# l = [1, 5, 3, 2, 4]
+# ma = 0 # 不確定な0を入れるよりl[0]とした方がいい
+# for i in l:
+#     if i > ma:
+#         ma = i
+# print(ma)
+# print(max(l))
 
+# l = [1, 2, 2, 2, 3, 3, 3, 4, 5]
+# print(list(set(l))) # set()は辞書配列になる
 
+# l = ['Python', 'Ruby', 'PHP', 'JavaScript']
+# min_len = len(l[0])
+# word = l[0]
+# for i in l:
+#     if int(len(i)) < min_len:
+#         word = i
+# print(word)
+
+# l = ['Python', 'Ruby', 'PHP', 'JavaScript']
+# print(sorted(l, key=len))
+
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# print(l[::2])
+
+# l = ['1', 2, '3', 4.0, '5', 6, '7', 8.0, '9', 10]
+# new = []
+# for i in l:
+#     if isinstance(i, int):
+#         new.append(i)
+# print(new)
+
+# l = [[i for i in range(1, 6)], [j for j in range(6, 11)]]
+# print(l)
+
+# l = [[i for i in range(1, 6)], [j for j in range(6, 11)]] # l = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]]
+# new = [j for i in l for j in i]
+# print(new)
+
+# l = [] # 空だとFalse,あるとTrue
+# if not l: # 空の時
+#     print('arisutoha karadesu')
+# else: # 空ではない時
+#     print(l)
+
+# l1 = [1, 2, 3, 4, 5]
+# l2 = [10, 9, 8, 7, 6]
+# new = []
+# for i, j in zip(l1, l2):
+#     new.append(i * j)
+# print(new)
+# new_1 = [i * j for i, j in zip(l1, l2)]
+# print(new_1)
+
+l = [1, '22', 3, '444', 0.0, '5']
+m = [i for i in l if isinstance(i, int)]
+print(max(m))
+print(min(m))
