@@ -791,5 +791,39 @@ print(count)'''
 # print(max(m))
 # print(min(m))
 
-a = 95367 + 3000 * 2 + 300 * 93
-print(a - 54000)
+# a = 95367 + 3000 * 2 + 300 * 93
+# print(a - 54000)
+
+# l = [0, '1', 3, 2, '4', 5, '7']
+# new = []
+# for count, i in enumerate(l):
+#     if count == int(i):
+#         new.append(i)
+# new_l = [i for count, i in enumerate(l) if count == int(i)]
+# print(new)
+# print(new_l)
+
+# l = [1, 2, 3, 3]
+# if len(set(l)) < len(l):
+#     print('重複しています')
+# else:
+#     print('重複はありません')
+
+# l = [1, 'aaa', 2, 'bbb', 'ddd', 4, 3, 'ccc']
+# l_int = sorted([i for i in l if isinstance(i, int)])
+# l_str = sorted([i for i in l if isinstance(i, str)])
+# new = l_int + l_str
+# print(new)
+
+# l = [1, 2, 3, 4, '5']
+# if [i for i in l if isinstance(i, str)]:
+#     print('ari')
+# else:
+#     print('nasi')
+
+# l = [1, 2, 3, 4, 5]
+# for i in range(0, len(l)*2, 2):
+#     l.insert(i, 'list')
+#
+# print(l)
+
