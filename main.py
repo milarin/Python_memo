@@ -786,7 +786,10 @@ print(count)'''
 # new_1 = [i * j for i, j in zip(l1, l2)]
 # print(new_1)
 
-l = [1, '22', 3, '444', 0.0, '5']
-m = [i for i in l if isinstance(i, int)]
-print(max(m))
-print(min(m))
+# l = [1, '22', 3, '444', 0.0, '5']
+# m = [i for i in l if isinstance(i, int)]
+# print(max(m))
+# print(min(m))
+
+a = 95367 + 3000 * 2 + 300 * 93
+print(a - 54000)
