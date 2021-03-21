@@ -827,3 +827,237 @@ print(count)'''
 #
 # print(l)
 
+# l = ['Python1', 'Java', 'Python2', 'Java2', 2]
+# for i in l:
+#     if 'Python' in str(i):
+#         l.remove(i)  # remove()は最初の要素を探して削除する pop()はintしか受け付けない
+# print(l)
+
+# l = [1, 3, 2, 3, 4, 6, 5, 8, 7]
+# for c, i in enumerate(l):
+#     if c % 3 == 0 and i % 3 == 0:
+#         l.pop(i)  # pop()はstrを引数に取れない
+# print(l)
+
+# l = [
+#     '080-0800-0000',
+#     '090-0000-0000',
+#     '080-0900-0800',
+# ]
+# for i in l:
+#     if '080-' not in i:
+#         l.remove(i)
+# print(l)
+# new = [i for i in l if '080' in i[:3]]
+# print(new)
+# new_l = [i for i in l if '080' == i[:3]]
+# print(new_l)
+#
+# l = [
+#     '080-0800-0000',
+#     '090-0000-0000',
+#     '080-0900-0800',
+#     '09-0909-0000',
+# ]
+# new = [i for i in l if i[3] == '-']
+# print(new)
+# new_l = [s for s in l if s.find('-') == 3]
+# print(new_l)
+
+# l1 = [4, 9, 6, 2]
+# l2 = [3, 5, 7]
+# l3 = [1, 9, 7]
+# # new = [sum(i) / len(i) for i in [l1, l2, l3]]
+# # print(new)
+# l = [l1, l2, l3]
+# sorted_l = sorted(l, key=lambda v: max(v) / len(v), reverse=True)
+# print(sorted_l[0])
+#
+# t = 1, 2, 3
+# l = [1, 2, 3]
+# print(t)
+# print(tuple(l))
+
+# t = 1,
+# print(t)
+# print(type(t))
+
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# t = tuple([l[i:i+3] for i in range(0, len(l), 3)])
+# print(t)
+# for c, i in enumerate(t, start=1):
+#     x, y, z = i
+#     print(f'{c}行目： {x} {y} {z}')
+
+# t = 1, '2', 3, '4', 5, '6', 7, '8', 9
+# new = tuple(reversed(t))
+# print(new)
+
+# t = 1, '2', 3, '4', 5
+# str_l = [str(i) for i in t]
+# new = int(''.join(str_l))
+# print(new)
+
+# t = (1, [2, 3], '4', (5, 6, 7), '8', (9, 10))
+# new = [i for i in t if isinstance(i, tuple)]
+# print(len(new))
+
+# t = (1, [2, 3], '4', (5, 6, 7), None, (9, 10))
+# new = []
+# for i in t:
+#     if isinstance(i, tuple):
+#         new.append(i)
+#     elif isinstance(i, list):
+#         new.append(tuple(i))
+#     else:
+#         new.append((i, ))
+# print(tuple(new))
+
+# print(set())
+# print({1, 2, 3})
+# print({1, 2, 2, 3, 3, 4, 4, 4})
+
+# l1 = [1, 2, 3, 4, 5]
+# l2 = [7, 6, 5, 4]
+# l3 = [3, 4, 5]
+# l1 = set(l1)
+# l2 = set(l2)
+# l3 = set(l3)
+# print(l1 | l2)
+# print(l1 - l2)
+# print(l1 ^ l2)
+# print(l1 >= l3)
+# print(l1 <= l3)
+
+# d = {'A': 111, 'B': 222, 'C': 333}
+# d2 = {}
+# print(d, d2, type(d), type(d2))
+# # d['D'] = 444
+# d.update({'D': 444})
+# print(d)
+
+# d1 = {'A': 111, 'B': 222, 'C': 333}
+# d2 = {'D': 444, 'E': 555}
+# d3 = {'F': 666}
+# # new_d = {}
+# # for i in [d1, d2, d3]:
+# #     new_d.update(i)
+# new_d1 = {**d1, **d2, **d3}
+# print(new_d1)
+
+# d = {'A': 111, 'B': 222, 'C': 333}
+# print('A' in d)
+# print('A' in d.keys())  # どちらでも正解。keys()を使わなくてもデフォルトでkeyを参照してくれる
+# print(444 in d.values())  # valueを参照する場合はvalue()を書く
+
+# keys = ['A', 'B', 'C']
+# values = [111, 222, 333]
+# new = {}
+# # for key, value in zip(keys, values):
+# #     new[key] = value
+# new_d = {key: value for key, value in zip(keys, values)}
+# print(new_d)
+
+# d = {'A': 111, 'B': 222, 'C': 333}
+# new = {k: v for k, v in d.items() if v >= 150}
+# print(new)
+
+# d = {'A': 111, 'B': 222, 'C': 333}
+# l = ['B', 'C', 'D', 'E']
+# for k in l:
+#     print(f'{k}に対応するvalue： {d.get(k)}')
+
+# d = {'B': 222, 'A': 111, 'D': 444, 'C': 333}
+# new = dict(sorted(d.items()))
+# # new = dict(sorted(d.items(), key=lambda x:x[0]))
+# print(new)
+
+# l = [
+#     {'id': 10000,
+#      'feature': {'name': 'Michael',
+#                  'height': 180.3,
+#                  'weight': 63.7,
+#                  'skills': {
+#                      'IT': ['Python', 'Golang', 'SQL'],
+#                      'Others': ['Chinese', 'Math']
+#                  }
+#                  }
+#      },
+#     {'id': 10001,
+#      'feature': {'name': 'Nancy',
+#                  'height': 156.7,
+#                  'weight': 39.7,
+#                  'skills': {
+#                      'IT': ['Java', 'SQL', 'JavaScript'],
+#                      'Others': ['Accounting']
+#                  }
+#                  }
+#      }
+# ]
+# print(l[0]['feature']['skills']['Others'][0])
+# it_skill = [d['feature']['skills']['IT'] for d in l]
+# m, n = it_skill
+# print(set(m) & set(n))
+
+# d = {'B': 222, 'A': 111, 'C': 333, 'D': 444}
+# max_value = d['B']
+# for v in d.values():
+#     if v > max_value:
+#         max_value = v
+# print(max_value)
+# max_value_1 = max(d.values())  # 1行で書けるで
+# print(max_value_1)
+# min_key = min(d.keys(), key=lambda k: d[k])
+# print(min_key)
+
+# d = {'S': 322}
+# l = []
+#
+# if d:
+#     print(d)
+# else:
+#     print('空です')
+
+# d = {'B': 222, 'A': 111, 'C': 333, 'D': 444}
+# # new = {k: v for k, v in d.items() if v % 2 == 0}
+# # print(new)
+# new = d.copy()
+# for k, v in d.items():
+#     if v % 2 != 0:
+#         del new[k]
+# print(new)
+
+# l = [False, False, False, True, True]
+# false_count = len(l) - sum(l)
+# print(false_count)
+# new = [int(f) for f in l]
+# print(new)
+
+# a = 3
+# if a != 3 and a != 7:
+#     print(f'{a}は3でも7でもありません')
+# if not (a == 3 or a == 7):
+#     print(f'{a}は3でも7でもありません')
+
+# l = [1, 0, [], (2, 3), 'AA', '', False, '' * 3]
+# new = [i for i in l if i]
+# print(new)  # True の要素をlから集めてる
+# print(len(new))
+# is_true_count = sum([bool(i) for i in l])  # [True, False, False, True, True, False, False, False]
+# print(is_true_count)
+# print([bool(i) for i in l])
+
+# x = False
+# print(1 if x else 100)
+
+# l = [1, 2, None, 3]
+# for i in l:
+#     if i is None:
+#         print(10000)
+#     else:
+#         print(i)
+
+# l = [1, 2, None, False, '3', '4', None, True]
+# is_true_or_none = len([i for i in l if i is None or i is True])
+# print(is_true_or_none)
+# print([i for i in l if i is None or i is True])
