@@ -1061,3 +1061,4 @@ print(count)'''
 # is_true_or_none = len([i for i in l if i is None or i is True])
 # print(is_true_or_none)
 # print([i for i in l if i is None or i is True])
+aaaa
